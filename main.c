@@ -17,7 +17,7 @@ int main()
 get_operation:
 
 	__fpurge(stdin);
-	printf("Enter the operator( +, -, x, /) : ");
+	printf("Enter the operator( +, -, x, /, %%, ^) : ");
 	scanf("%c", &operation );
 
 	switch( operation )
@@ -44,6 +44,18 @@ get_operation:
 				return 0;
 			}
 			result = (float)first_num / second_num;
+			break;
+		case '%':
+			//Modulus
+			result = first_num % second_num;
+			break;
+		case '^':
+			//Power
+			result = 1;
+			for( int i = 0 ; i < second_num ; i++ )
+			{
+				result = result  * first_num;
+			}
 			break;
 		default:
 			printf("ERROR: Please Input a valid operator\n");
