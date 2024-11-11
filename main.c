@@ -37,6 +37,12 @@ get_operation:
 			break;
 		case '/':
 			//Division
+			//Protection for division by zero
+			if( second_num == 0 )
+			{
+				printf("Error: Divisio  By Zero is not allowed\n");
+				return 0;
+			}
 			result = (float)first_num / second_num;
 			break;
 		default:
