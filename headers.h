@@ -3,6 +3,6 @@
 
 #include<stdio.h>
 #include<stdio_ext.h>
-
+#include<ctype.h>
 
 #endif
