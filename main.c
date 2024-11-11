@@ -2,25 +2,22 @@
 
 int main()
 {
-	int first_num, second_num;
+	int first_num = 0, second_num = 0;
+	char string[40];
 	float result;
-	char operation, break_loop;
+	char operation = 'D', break_loop;
 
 	printf("Sample Two Number Calculator\n");
 
 	do
 	{
-		printf("Enter the first number : ");
-		scanf("%d", &first_num );
-
-		printf("Enter the second  number : ");
-		scanf("%d", &second_num );
-
-get_operation:
 
 		__fpurge(stdin);
-		printf("Enter the operator( +, -, x, /, %%, ^) : ");
-		scanf("%c", &operation );
+		printf("Enter the operation to be done\n");
+		printf("Avaliable Operations[ +, -, *, /, ^, %%]: " );
+		scanf("%40[^\n]", string );
+
+		extract_numbers( string, &first_num, &second_num, &operation);
 
 		switch( operation )
 		{
@@ -61,13 +58,14 @@ get_operation:
 				break;
 			default:
 				printf("ERROR: Please Input a valid operator\n");
-				goto get_operation;
+				goto prompt;
 				break;
 		}
 
 		printf("The result : %g\n", result );
 
 		__fpurge(stdin);
+prompt:
 		printf("Do you want to continue[y/n]: ");
 		scanf("%c", &break_loop );
 
