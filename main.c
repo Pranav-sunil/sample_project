@@ -2,7 +2,12 @@
 
 void add_numbers( int num1, int num2 )
 {
-	printf("The result of addition : %d\n", num1 * num2 )
+	printf("The result of addition : %d\n", num1 + num2 );
+}
+
+void subtract_numbers( int num1, int num2 )
+{
+	printf("The result of subtraction : %d\n", num1 - num2 );
 }
 
 int main()
@@ -32,9 +37,7 @@ int main()
 				break;
 			case '-':
 				//Subtraction
-				result = first_num - second_num;
-				printf("The result of subtraction : %g\n", result );
-
+				subtract_numbers( first_num, second_num);
 				break;
 			case '*':
 			case 'x':
