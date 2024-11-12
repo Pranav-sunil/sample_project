@@ -1,21 +1,10 @@
 #include "headers.h"
 
-void add_numbers( int num1, int num2 )
-{
-	printf("The result of addition : %d\n", num1 + num2 );
-}
-
-void subtract_numbers( int num1, int num2 )
-{
-	printf("The result of subtraction : %d\n", num1 - num2 );
-}
-
 int main()
 {
-	int first_num = 0, second_num = 0;
+	int first_num, second_num;
 	char string[40];
-	float result;
-	char operation = 'D', break_loop;
+	char operation, break_loop;
 
 	printf("Sample Two Number Calculator\n");
 
@@ -23,7 +12,7 @@ int main()
 	{
 
 		__fpurge(stdin);
-		printf("Enter the operation to be done\n");
+		printf("Enter the expression\n");
 		printf("Avaliable Operations[ +, -, *, /, ^, %%]: " );
 		scanf("%40[^\n]", string );
 
@@ -42,9 +31,7 @@ int main()
 			case '*':
 			case 'x':
 				//Multiplication
-				result =  first_num * second_num;
-				printf("The result of multiplication: %g\n", result );
-
+				multiply_numbers( first_num, second_num );
 				break;
 			case '/':
 				//Division
@@ -54,30 +41,19 @@ int main()
 					printf("Error: Divisio  By Zero is not allowed\n");
 					return 0;
 				}
-				result = (float)first_num / second_num;
+				divide_numbers( first_num, second_num );
 				break;
-				printf("The result of division : %g\n", result );
-
 			case '%':
 				//Modulus
-				result = first_num % second_num;
+				obtain_modulus( first_num, second_num );
 				break;
-				printf("The result of modulus operation : %g\n", result );
-
 			case '^':
 				//Power
-				result = 1;
-				for( int i = 0 ; i < second_num ; i++ )
-				{
-					result = result  * first_num;
-				}
-				printf("The result of operation : %g\n", result );
-
+				power_operation( first_num, second_num );
 				break;
 			default:
 				printf("ERROR: Please Input a valid operator\n");
 				goto prompt;
-				break;
 		}
 
 prompt:
