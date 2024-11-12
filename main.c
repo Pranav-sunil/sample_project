@@ -2,7 +2,7 @@
 
 void add_numbers( int num1, int num2 )
 {
-	printf("The result of addition : %d\n", num1 + num2 )
+	printf("The result of addition : %d\n", num1 * num2 )
 }
 
 int main()
