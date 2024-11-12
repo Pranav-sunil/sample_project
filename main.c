@@ -65,7 +65,7 @@ int main()
 				{
 					result = result  * first_num;
 				}
-				printf("The result of power : %g\n", result );
+				printf("The result of operation : %g\n", result );
 
 				break;
 			default:
@@ -76,7 +76,7 @@ int main()
 
 prompt:
 		__fpurge(stdin);
-		printf("Do you want to continue[y/n]: ");
+		printf("Do you want to continue [y/n]: ");
 		scanf("%c", &break_loop );
 
 		break_loop = tolower( break_loop );
