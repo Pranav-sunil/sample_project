@@ -1,5 +1,10 @@
 #include "headers.h"
 
+void add_numbers( int num1, int num2 )
+{
+	printf("The result of addition : %d\n", num1 + num2 )
+}
+
 int main()
 {
 	int first_num = 0, second_num = 0;
@@ -23,9 +28,7 @@ int main()
 		{
 			case '+':
 				//Addition
-				result = first_num + second_num;
-				printf("The result of addition : %g\n", result );
-
+				add_numbers( first_num, second_num );
 				break;
 			case '-':
 				//Subtraction
