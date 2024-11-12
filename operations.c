@@ -35,3 +35,8 @@ void power_operation(int num1, int num2)
 
 	printf("The result is : %d\n", result );
 }
+
+void square_root(int num )
+{
+	printf("The square root of %d : %lg\n", num, sqrt( num ) );
+}
