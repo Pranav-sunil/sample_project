@@ -13,7 +13,7 @@ int main()
 
 		__fpurge(stdin);
 		printf("Enter the expression\n");
-		printf("Avaliable Operations[ +, -, *, /, ^, %%]: " );
+		printf("Avaliable Operations[ +, -, *, /, ^, %%, ?(sqrt)]: " );
 		scanf("%40[^\n]", string );
 
 		extract_numbers( string, &first_num, &second_num, &operation);
@@ -50,6 +50,10 @@ int main()
 			case '^':
 				//Power
 				power_operation( first_num, second_num );
+				break;
+			case '?':
+				//Square root
+				square_root( second_num );
 				break;
 			default:
 				printf("ERROR: Please Input a valid operator\n");

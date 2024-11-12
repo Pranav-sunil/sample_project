@@ -4,6 +4,7 @@
 #include<stdio.h>
 #include<stdio_ext.h>
 #include<ctype.h>
+#include<math.h>
 
 void extract_numbers( char *ip_string, int *first_num, int *sec_num, char *oper );
 
@@ -18,5 +19,7 @@ void divide_numbers(int num1, int num2);
 void obtain_modulus(int num1, int num2);
 
 void power_operation(int num1, int num2);
+
+void square_root( int num );
 
 #endif
