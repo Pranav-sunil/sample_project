@@ -24,15 +24,21 @@ int main()
 			case '+':
 				//Addition
 				result = first_num + second_num;
+				printf("The result of addition : %g\n", result );
+
 				break;
 			case '-':
 				//Subtraction
 				result = first_num - second_num;
+				printf("The result of subtraction : %g\n", result );
+
 				break;
-			case'*':
+			case '*':
 			case 'x':
 				//Multiplication
 				result =  first_num * second_num;
+				printf("The result of multiplication: %g\n", result );
+
 				break;
 			case '/':
 				//Division
@@ -44,10 +50,14 @@ int main()
 				}
 				result = (float)first_num / second_num;
 				break;
+				printf("The result of division : %g\n", result );
+
 			case '%':
 				//Modulus
 				result = first_num % second_num;
 				break;
+				printf("The result of modulus operation : %g\n", result );
+
 			case '^':
 				//Power
 				result = 1;
@@ -55,6 +65,8 @@ int main()
 				{
 					result = result  * first_num;
 				}
+				printf("The result of power : %g\n", result );
+
 				break;
 			default:
 				printf("ERROR: Please Input a valid operator\n");
@@ -62,10 +74,8 @@ int main()
 				break;
 		}
 
-		printf("The result : %g\n", result );
-
-		__fpurge(stdin);
 prompt:
+		__fpurge(stdin);
 		printf("Do you want to continue[y/n]: ");
 		scanf("%c", &break_loop );
 
