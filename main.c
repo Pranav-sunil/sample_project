@@ -6,7 +6,7 @@ int main()
 	char string[40];
 	char operation, break_loop;
 
-	printf("Sample Two Number Calculator\n");
+	printf("=======Sample Two Number Calculator======\n\n");
 
 	do
 	{
