@@ -38,8 +38,8 @@ int main()
 				//Protection for division by zero
 				if( second_num == 0 )
 				{
-					printf("Error: Divisio  By Zero is not allowed\n");
-					return 0;
+					printf("Error: Division  By Zero is not allowed\n");
+					break;
 				}
 				divide_numbers( first_num, second_num );
 				break;
@@ -53,6 +53,12 @@ int main()
 				break;
 			case '?':
 				//Square root
+				//Protection for negative square root prevension
+				if( second_num < 0 )
+				{
+					printf("Error: Square roots of negative numbers are not allowed\n");
+					break;
+				}
 				square_root( second_num );
 				break;
 			default:
