@@ -6,7 +6,7 @@ int main()
 	char string[40];
 	char operation, break_loop;
 
-	printf("=======Sample Two Number Calculator======\n\n");
+	printf("=======Simple Two Number Calculator======\n\n");
 
 	do
 	{
@@ -56,7 +56,7 @@ int main()
 				square_root( second_num );
 				break;
 			default:
-				printf("ERROR: Please Input a valid operator\n");
+				printf("ERROR: Invalid Input\n");
 				goto prompt;
 		}
 
